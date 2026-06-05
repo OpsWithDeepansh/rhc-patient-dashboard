@@ -1,0 +1,11 @@
+{
+  "month": "Jun26",
+  "totalPatients": 4295,
+  "connected": 1810,
+  "notConnected": 633,
+  "inactive": 4,
+  "denied": 412,
+  "pending": 1436,
+  "callableLeads": 3879,
+  "connectivity": 46.66
+}
