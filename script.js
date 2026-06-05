@@ -270,6 +270,8 @@ fetch('data/Jun26.json')
     .then(response => response.json())
     .then(data => {
 
+        console.log("JSON Loaded:", data);
+
         document.getElementById('totalPatients').textContent =
             data.totalPatients;
 
