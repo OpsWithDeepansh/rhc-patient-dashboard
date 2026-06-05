@@ -275,6 +275,27 @@ fetch('data/Jun26.json')
         document.getElementById('totalPatients').textContent =
             data.totalPatients;
 
+        document.getElementById('connected').textContent =
+            data.connected;
+
+        document.getElementById('notConnected').textContent =
+            data.notConnected;
+
+        document.getElementById('inactive').textContent =
+            data.inactive;
+
+        document.getElementById('denied').textContent =
+            data.denied;
+
+        document.getElementById('pending').textContent =
+            data.pending;
+
+        document.getElementById('callableLeads').textContent =
+            data.callableLeads;
+
+        document.getElementById('connectivity').textContent =
+            data.connectivity + '%';
+
     })
     .catch(error => {
         console.error('Error loading JSON:', error);
