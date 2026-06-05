@@ -266,37 +266,44 @@ new Chart(document.getElementById('itpChart'), {
 });
 // LOAD DASHBOARD DATA
 
-fetch('data/Jun26.json')
-    .then(response => response.json())
-    .then(data => {
+function loadMonth(monthFile){
 
-        console.log("JSON Loaded:", data);
+    fetch(`data/${monthFile}.json`)
+        .then(response => response.json())
+        .then(data => {
 
-        document.getElementById('totalPatients').textContent =
-            data.totalPatients;
+            console.log("JSON Loaded:", data);
 
-        document.getElementById('connected').textContent =
-            data.connected;
+            document.getElementById('totalPatients').textContent =
+                data.totalPatients;
 
-        document.getElementById('notConnected').textContent =
-            data.notConnected;
+            document.getElementById('connected').textContent =
+                data.connected;
 
-        document.getElementById('inactive').textContent =
-            data.inactive;
+            document.getElementById('notConnected').textContent =
+                data.notConnected;
 
-        document.getElementById('denied').textContent =
-            data.denied;
+            document.getElementById('inactive').textContent =
+                data.inactive;
 
-        document.getElementById('pending').textContent =
-            data.pending;
+            document.getElementById('denied').textContent =
+                data.denied;
 
-        document.getElementById('callableLeads').textContent =
-            data.callableLeads;
+            document.getElementById('pending').textContent =
+                data.pending;
 
-        document.getElementById('connectivity').textContent =
-            data.connectivity + '%';
+            document.getElementById('callableLeads').textContent =
+                data.callableLeads;
 
-    })
-    .catch(error => {
-        console.error('Error loading JSON:', error);
-    });
+            document.getElementById('connectivity').textContent =
+                data.connectivity + '%';
+
+        })
+        .catch(error => {
+            console.error('Error loading JSON:', error);
+        });
+
+}
+
+// Load latest month when dashboard opens
+loadMonth('Jun26');
