@@ -1,8 +1,8 @@
 {
   "month": "Jun26",
-  "totalPatients": 6000,
-  "connected": 1810,
-  "notConnected": 633,
+  "totalPatients": 9999,
+  "connected": 2000,
+  "notConnected": 6300,
   "inactive": 4,
   "denied": 412,
   "pending": 1436,
