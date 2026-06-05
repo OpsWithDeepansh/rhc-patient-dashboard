@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+
+<body>
+
+    <h1 style="margin-bottom:20px;">Patient Dashboard</h1>
+
+    <!-- KPI ROW -->
+    <div class="kpi-row">
+
+        <div class="kpi">
+            Total Patients
+            <span>4295</span>
+        </div>
+
+        <div class="kpi">
+            Connected
+            <span>1810</span>
+        </div>
+
+        <div class="kpi">
+            Not Connected
+            <span>633</span>
+        </div>
+
+        <div class="kpi">
+            Inactive
+            <span>4</span>
+        </div>
+
+        <div class="kpi">
+            Denied/NRTD
+            <span>412</span>
+        </div>
+
+        <div class="kpi">
+            Pending
+            <span>1436</span>
+        </div>
+
+        <div class="kpi">
+            Callable Leads
+            <span>3879</span>
+        </div>
+
+        <div class="kpi highlight">
+            Connectivity
+            <span>46.66%</span>
+        </div>
+
+    </div>
+
+    <!-- AGENT GRID -->
+
+    <div class="agent-grid">
+
+        <div class="card">
+            <h3>Ansha</h3>
+            <div class="chart-box">
+                <canvas id="anshaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Bhuvan</h3>
+            <div class="chart-box">
+                <canvas id="bhuvanChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Mouli</h3>
+            <div class="chart-box">
+                <canvas id="mouliChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Murugesh</h3>
+            <div class="chart-box">
+                <canvas id="murugeshChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Sarita</h3>
+            <div class="chart-box">
+                <canvas id="saritaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Rashmi</h3>
+            <div class="chart-box">
+                <canvas id="rashmiChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ANALYTICS -->
+
+    <div class="analytics-grid">
+
+        <div class="card">
+            <h3>Connectivity Trend</h3>
+            <div class="chart-box-large">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Daily Performance</h3>
+            <div class="chart-box-large">
+                <canvas id="dailyChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>ITP</h3>
+            <div class="chart-box-large">
+                <canvas id="itpChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

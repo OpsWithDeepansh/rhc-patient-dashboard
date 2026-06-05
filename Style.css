@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#eef2f6;
+    padding:20px;
+}
+
+/* HEADER */
+
+.header-container{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.dashboard-title{
+    color:#123456;
+}
+
+.subtitle{
+    color:#666;
+    font-size:13px;
+}
+
+.header-actions{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.action-btn{
+    border:none;
+    background:#2b7a91;
+    color:white;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.filter-row{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.filter-row select{
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:6px;
+}
+
+/* KPI */
+
+.kpi-row{
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.kpi{
+    background:#2b7a91;
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:10px;
+}
+
+.kpi span{
+    display:block;
+    font-size:30px;
+    font-weight:700;
+    margin-top:5px;
+}
+
+.kpi.highlight{
+    background:#174b5a;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* AGENT GRID */
+
+.agent-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+/* ANALYTICS GRID */
+
+.analytics-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+/* CHART CONTAINERS */
+
+.chart-box{
+    height:160px;
+    position:relative;
+}
+
+.chart-box-large{
+    height:320px;
+    position:relative;
+}
+
+canvas{
+    max-width:100%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .kpi-row{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .agent-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .analytics-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .filter-row{
+        grid-template-columns:1fr;
+    }
+
+    .agent-grid{
+        grid-template-columns:1fr;
+    }
+
+    .kpi-row{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .header-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+}
+.agent-grid .card{
+    min-height:280px;
+}
