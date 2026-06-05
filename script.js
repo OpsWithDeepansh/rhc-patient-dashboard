@@ -307,3 +307,13 @@ function loadMonth(monthFile){
 
 // Load latest month when dashboard opens
 loadMonth('Jun26');
+
+// MONTH DROPDOWN
+
+document
+    .getElementById('monthSelector')
+    .addEventListener('change', function () {
+
+        loadMonth(this.value);
+
+    });
