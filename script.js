@@ -264,3 +264,16 @@ new Chart(document.getElementById('itpChart'), {
         }
     }
 });
+// LOAD DASHBOARD DATA
+
+fetch('data/Jun26.json')
+    .then(response => response.json())
+    .then(data => {
+
+        document.getElementById('totalPatients').textContent =
+            data.totalPatients;
+
+    })
+    .catch(error => {
+        console.error('Error loading JSON:', error);
+    });
