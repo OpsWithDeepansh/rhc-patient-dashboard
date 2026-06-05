@@ -1,11 +1,21 @@
 {
-  "month": "May26",
-  "totalPatients": 4500,
-  "connected": 1500,
-  "notConnected": 500,
-  "inactive": 10,
-  "denied": 300,
-  "pending": 1200,
-  "callableLeads": 3700,
-  "connectivity": 40.54
+  "month": "Jun26",
+  "totalPatients": 6000,
+  "connected": 1810,
+  "notConnected": 633,
+  "inactive": 4,
+  "denied": 412,
+  "pending": 1436,
+  "callableLeads": 3879,
+  "connectivity": 46.66,
+
+  "agents": {
+    "ansha": {
+      "connected": 250,
+      "notConnected": 80,
+      "inactive": 2,
+      "denied": 50,
+      "pending": 120
+    }
+  }
 }
