@@ -22,7 +22,7 @@ const pieColors = [
 // ===== PIE CHART FUNCTION =====
 
 function createPieChart(id, dataValues) {
-
+    
     new Chart(document.getElementById(id), {
 
         type: 'pie',
@@ -75,10 +75,68 @@ function createPieChart(id, dataValues) {
         }
     });
 }
+function loadAnshaChart(agentData) {
 
+    const chartData = [
+        agentData.connected,
+        agentData.notConnected,
+        agentData.inactive,
+        agentData.denied,
+        agentData.pending
+    ];
+
+    if (anshaChart) {
+        anshaChart.destroy();
+    }
+
+    anshaChart = new Chart(
+        document.getElementById('anshaChart'),
+        {
+            type: 'pie',
+            data: {
+                labels: pieLabels,
+                datasets: [{
+                    data: chartData,
+                    backgroundColor: pieColors
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 12
+                        },
+
+                        formatter: (value, context) => {
+
+                            const data =
+                                context.chart.data.datasets[0].data;
+
+                            const total =
+                                data.reduce((a, b) => a + b, 0);
+
+                            return total
+                                ? ((value / total) * 100).toFixed(1) + '%'
+                                : '0%';
+                        }
+                    }
+                }
+            }
+        }
+    );
+}
 // ===== PIE CHARTS =====
 
-createPieChart('anshaChart', [312, 105, 0, 82, 193]);
+let anshaChart;
 createPieChart('bhuvanChart', [135, 60, 0, 82, 415]);
 createPieChart('mouliChart', [310, 129, 1, 82, 170]);
 createPieChart('murugeshChart', [384, 122, 0, 0, 327]);
@@ -297,7 +355,7 @@ function loadMonth(monthFile){
 
             document.getElementById('connectivity').textContent =
                 data.connectivity + '%';
-
+            loadAnshaChart(data.agents.ansha);
         })
         .catch(error => {
             console.error('Error loading JSON:', error);
