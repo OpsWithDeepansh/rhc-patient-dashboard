@@ -139,7 +139,9 @@ let agentCharts = {};
 
 // ===== CONNECTIVITY TREND =====
 
-new Chart(document.getElementById('trendChart'), {
+let trendChart = new Chart(     
+    document.getElementById('trendChart'),     
+    {
 
     type: 'line',
 
@@ -197,7 +199,7 @@ new Chart(document.getElementById('trendChart'), {
             }
         }
     }
-});
+    });
 
 // ===== DAILY PERFORMANCE =====
 
@@ -355,6 +357,17 @@ function loadMonth(monthFile){
             loadAgentChart('murugeshChart', data.agents.murugesh); 
             loadAgentChart('saritaChart', data.agents.sarita); 
             loadAgentChart('rashmiChart', data.agents.rashmi);
+           
+    trendChart.data.datasets[0].data = [
+    data.trend.ansha,
+    data.trend.bhuvan,
+    data.trend.mouli,
+    data.trend.murugesh,
+    data.trend.sarita,
+    data.trend.rashmi
+];
+
+trendChart.update();
         })
         .catch(error => {
             console.error('Error loading JSON:', error);
