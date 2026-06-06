@@ -359,7 +359,9 @@ function loadMonth(monthFile){
             loadAgentChart('rashmiChart', data.agents.rashmi);
 
 console.log("Trend Data:", data.trend);
-            
+
+console.log("Before:", trendChart.data.datasets[0].data);
+
 trendChart.data.datasets[0].data = [
     data.trend.ansha,
     data.trend.bhuvan,
@@ -369,8 +371,9 @@ trendChart.data.datasets[0].data = [
     data.trend.rashmi
 ];
 
-trendChart.update();
-        })
+console.log("After:", trendChart.data.datasets[0].data);
+
+trendChart.update();        })
         .catch(error => {
             console.error('Error loading JSON:', error);
         });
