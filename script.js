@@ -75,7 +75,8 @@ function createPieChart(id, dataValues) {
         }
     });
 }
-function loadAnshaChart(agentData) {
+
+function loadAgentChart(chartId, agentData) {
 
     const chartData = [
         agentData.connected,
@@ -85,12 +86,12 @@ function loadAnshaChart(agentData) {
         agentData.pending
     ];
 
-    if (anshaChart) {
-        anshaChart.destroy();
+    if (agentCharts[chartId]) {
+        agentCharts[chartId].destroy();
     }
 
-    anshaChart = new Chart(
-        document.getElementById('anshaChart'),
+    agentCharts[chartId] = new Chart(
+        document.getElementById(chartId),
         {
             type: 'pie',
             data: {
@@ -108,14 +109,12 @@ function loadAnshaChart(agentData) {
                     legend: {
                         position: 'bottom'
                     },
-
                     datalabels: {
                         color: '#fff',
                         font: {
                             weight: 'bold',
                             size: 12
                         },
-
                         formatter: (value, context) => {
 
                             const data =
@@ -136,12 +135,7 @@ function loadAnshaChart(agentData) {
 }
 // ===== PIE CHARTS =====
 
-let anshaChart;
-createPieChart('bhuvanChart', [135, 60, 0, 82, 415]);
-createPieChart('mouliChart', [310, 129, 1, 82, 170]);
-createPieChart('murugeshChart', [384, 122, 0, 0, 327]);
-createPieChart('saritaChart', [307, 131, 1, 84, 169]);
-createPieChart('rashmiChart', [362, 86, 2, 82, 162]);
+let agentCharts = {};
 
 // ===== CONNECTIVITY TREND =====
 
@@ -355,7 +349,12 @@ function loadMonth(monthFile){
 
             document.getElementById('connectivity').textContent =
                 data.connectivity + '%';
-            loadAnshaChart(data.agents.ansha);
+            loadAgentChart('anshaChart', data.agents.ansha); 
+            loadAgentChart('bhuvanChart', data.agents.bhuvan); 
+            loadAgentChart('mouliChart', data.agents.mouli); 
+            loadAgentChart('murugeshChart', data.agents.murugesh); 
+            loadAgentChart('saritaChart', data.agents.sarita); 
+            loadAgentChart('rashmiChart', data.agents.rashmi);
         })
         .catch(error => {
             console.error('Error loading JSON:', error);
