@@ -10,12 +10,47 @@
   "connectivity": 46.66,
 
   "agents": {
-    "ansha": {
-      "connected": 312,
-      "notConnected": 105,
-      "inactive": 0,
-      "denied": 82,
-      "pending": 193
-    }
+  "ansha": {
+    "connected": 312,
+    "notConnected": 105,
+    "inactive": 0,
+    "denied": 82,
+    "pending": 193
+  },
+  "bhuvan": {
+    "connected": 135,
+    "notConnected": 60,
+    "inactive": 0,
+    "denied": 82,
+    "pending": 415
+  },
+  "mouli": {
+    "connected": 310,
+    "notConnected": 129,
+    "inactive": 1,
+    "denied": 82,
+    "pending": 170
+  },
+  "murugesh": {
+    "connected": 384,
+    "notConnected": 122,
+    "inactive": 0,
+    "denied": 0,
+    "pending": 327
+  },
+  "sarita": {
+    "connected": 307,
+    "notConnected": 131,
+    "inactive": 1,
+    "denied": 84,
+    "pending": 169
+  },
+  "rashmi": {
+    "connected": 362,
+    "notConnected": 86,
+    "inactive": 2,
+    "denied": 82,
+    "pending": 162
   }
+}
 }
