@@ -264,7 +264,9 @@ let dailyChart = new Chart(
 
 // ===== ITP =====
 
-new Chart(document.getElementById('itpChart'), {
+let itpChart = new Chart(
+    document.getElementById('itpChart'),
+    {
 
     type: 'bar',
 
@@ -328,8 +330,6 @@ function loadMonth(monthFile){
         .then(response => response.json())
         .then(data => {
 
-            console.log("JSON Loaded:", data);
-
             document.getElementById('totalPatients').textContent =
                 data.totalPatients;
 
@@ -360,10 +360,6 @@ function loadMonth(monthFile){
             loadAgentChart('saritaChart', data.agents.sarita); 
             loadAgentChart('rashmiChart', data.agents.rashmi);
 
-console.log("Trend Data:", data.trend);
-
-console.log("Before:", trendChart.data.datasets[0].data);
-
 trendChart.data.datasets[0].data = [
     data.trend.ansha,
     data.trend.bhuvan,
@@ -373,12 +369,7 @@ trendChart.data.datasets[0].data = [
     data.trend.rashmi
 ];
 
-console.log("After:", trendChart.data.datasets[0].data);
-
 trendChart.update();
-console.log("Daily Performance:");
-console.log(data.dailyPerformance);
-console.log(data.dailyPerformance.connected);
 
 dailyChart.data.datasets[0].data =
     data.dailyPerformance.connected;
@@ -386,7 +377,17 @@ dailyChart.data.datasets[0].data =
 dailyChart.data.datasets[1].data =
     data.dailyPerformance.notConnected;
 
-dailyChart.update();        })
+dailyChart.update();
+
+itpChart.data.datasets[0].data =
+    data.itp.connected;
+
+itpChart.data.datasets[1].data =
+    data.itp.pending;
+
+itpChart.update();
+
+        })
         .catch(error => {
             console.error('Error loading JSON:', error);
         });
