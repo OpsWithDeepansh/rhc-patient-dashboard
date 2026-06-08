@@ -272,14 +272,7 @@ let itpChart = new Chart(
 
     data: {
 
-        labels: [
-            'Ansha',
-            'Bhuvan',
-            'Mouli',
-            'Murugesh',
-            'Sarita',
-            'Rashmi'
-        ],
+        labels: [],
 
         datasets: [
 
@@ -390,14 +383,11 @@ Object.keys(data.agents).forEach(agent => {
 
 });
 
-trendChart.data.datasets[0].data = [
-    data.trend.ansha,
-    data.trend.bhuvan,
-    data.trend.mouli,
-    data.trend.murugesh,
-    data.trend.sarita,
-    data.trend.rashmi
-];
+trendChart.data.labels =
+    Object.keys(data.trend);
+
+trendChart.data.datasets[0].data =
+    Object.values(data.trend);
 
 trendChart.update();
 
