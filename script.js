@@ -151,7 +151,7 @@ let trendChart = new Chart(
 
         datasets: [{
             label: 'Connectivity %',
-            data: [51.15, 22.13, 50.90, 46.10, 50.58, 59.34],
+            data: [],
             borderColor: '#E91E63',
             backgroundColor: '#E91E63',
             tension: 0.3,
@@ -210,13 +210,13 @@ let dailyChart = new Chart(
 
             {
                 label: 'Connected',
-                data: [27, 0, 36, 31, 22, 32],
+                data: [],
                 backgroundColor: '#4CAF50'
             },
 
             {
                 label: 'Not Connected',
-                data: [16, 0, 15, 13, 11, 12],
+                data: [],
                 backgroundColor: '#F44336'
             }
         ]
@@ -264,13 +264,13 @@ let itpChart = new Chart(
 
             {
                 label: 'Connected',
-                data: [0, 0, 1, 13, 0, 12],
+                data: [],
                 backgroundColor: '#03A9F4'
             },
 
             {
                 label: 'Pending',
-                data: [1, 0, 0, 0, 0, 4],
+                data: [],
                 backgroundColor: '#FF9800'
             }
         ]
@@ -315,12 +315,24 @@ function createAgentCards(agents) {
         agentGrid.innerHTML += `
 
             <div class="card">
-                <h3>${agent}</h3>
 
-                <div class="chart-box">
-                    <canvas id="${agent}Chart"></canvas>
-                </div>
-            </div>
+    <h3>${agent}</h3>
+
+    <p>
+        Connectivity:
+        ${agents[agent].connectivity}%
+    </p>
+
+    <p>
+        Callable Leads:
+        ${agents[agent].callableLeads}
+    </p>
+
+    <div class="chart-box">
+        <canvas id="${agent}Chart"></canvas>
+    </div>
+
+</div>
 
         `;
 
