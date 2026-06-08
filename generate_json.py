@@ -164,6 +164,35 @@ if match:
 
     print(f"\nJSON Created: {output_path}")
 
+    # Update months.json
+
+    months_file = os.path.join(
+        "data",
+        "months.json"
+    )
+
+    months = []
+
+    if os.path.exists(months_file):
+
+        with open(months_file, "r") as f:
+            months = json.load(f)
+
+    month_code = f"{month_name}{year}"
+
+    if month_code not in months:
+        months.insert(0, month_code)
+
+    with open(months_file, "w") as f:
+
+        json.dump(
+            months,
+            f,
+            indent=4
+        )
+
+    print("months.json Updated")
+
 else:
 
     print(

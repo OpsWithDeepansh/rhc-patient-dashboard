@@ -296,6 +296,32 @@ function createAgentCards(agents) {
     });
 
 }
+function loadMonths() {
+
+    fetch('data/months.json')
+        .then(response => response.json())
+        .then(months => {
+
+            const selector =
+                document.getElementById('monthSelector');
+
+            selector.innerHTML = '';
+
+            months.forEach(month => {
+
+                selector.innerHTML += `
+                    <option value="${month}">
+                        ${month}
+                    </option>
+                `;
+
+            });
+
+            loadMonth(months[0]);
+
+        });
+
+}
 
 function loadMonth(monthFile){
 
@@ -376,7 +402,7 @@ itpChart.update();
 }
 
 // Load latest month when dashboard opens
-loadMonth('Jun26');
+loadMonth();
 
 // MONTH DROPDOWN
 

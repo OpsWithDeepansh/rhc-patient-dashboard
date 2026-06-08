@@ -124,7 +124,7 @@ body{
 /* CHART CONTAINERS */
 
 .chart-box{
-    height:160px;
+    height: 320px;
     position:relative;
 }
 
@@ -176,4 +176,21 @@ canvas{
 }
 .agent-grid .card{
     min-height:280px;
+}
+
+.agent-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.agent-metrics strong {
+    display: block;
+    font-size: 18px;
+}
+
+.agent-metrics span {
+    font-size: 12px;
+    color: #666;
 }
