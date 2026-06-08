@@ -324,11 +324,38 @@ let itpChart = new Chart(
 });
 // LOAD DASHBOARD DATA
 
+function createAgentCards(agents) {
+
+    const agentGrid =
+        document.getElementById('agentGrid');
+
+    agentGrid.innerHTML = '';
+
+    Object.keys(agents).forEach(agent => {
+
+        agentGrid.innerHTML += `
+
+            <div class="card">
+                <h3>${agent}</h3>
+
+                <div class="chart-box">
+                    <canvas id="${agent}Chart"></canvas>
+                </div>
+            </div>
+
+        `;
+
+    });
+
+}
+
 function loadMonth(monthFile){
 
     fetch(`data/${monthFile}.json`)
         .then(response => response.json())
         .then(data => {
+
+            createAgentCards(data.agents);
 
             document.getElementById('totalPatients').textContent =
                 data.totalPatients;
