@@ -147,14 +147,7 @@ let trendChart = new Chart(
 
     data: {
 
-        labels: [
-            'Ansha',
-            'Bhuvan',
-            'Mouli',
-            'Murugesh',
-            'Sarita',
-            'Rashmi'
-        ],
+        labels: [],
 
         datasets: [{
             label: 'Connectivity %',
@@ -394,6 +387,9 @@ dailyChart.data.datasets[1].data =
     data.dailyPerformance.notConnected;
 
 dailyChart.update();
+
+itpChart.data.labels =
+    Object.keys(data.agents);
 
 itpChart.data.datasets[0].data =
     data.itp.connected;
