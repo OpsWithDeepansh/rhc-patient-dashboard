@@ -211,14 +211,7 @@ let dailyChart = new Chart(
 
     data: {
 
-        labels: [
-            'Ansha',
-            'Bhuvan',
-            'Mouli',
-            'Murugesh',
-            'Sarita',
-            'Rashmi'
-        ],
+        labels: [],
 
         datasets: [
 
@@ -390,6 +383,9 @@ trendChart.data.datasets[0].data =
     Object.values(data.trend);
 
 trendChart.update();
+
+dailyChart.data.labels =
+    Object.keys(data.agents);
 
 dailyChart.data.datasets[0].data =
     data.dailyPerformance.connected;
