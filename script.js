@@ -309,13 +309,18 @@ function loadMonths() {
 
             months.forEach(month => {
 
-                selector.innerHTML += `
-                    <option value="${month}">
-                        ${month}
-                    </option>
-                `;
+    const displayMonth =
+        month.substring(0, 3) +
+        "'" +
+        month.substring(3);
 
-            });
+    selector.innerHTML += `
+        <option value="${month}">
+            ${displayMonth}
+        </option>
+    `;
+
+});
 
             loadMonth(months[0]);
 
@@ -354,6 +359,8 @@ function loadMonth(monthFile){
 
             document.getElementById('connectivity').textContent =
                 data.connectivity + '%';
+            document.getElementById('lastUpdated').textContent =
+                'Last Updated: ' + data.generatedOn;
 
 Object.keys(data.agents).forEach(agent => {
 

@@ -1,21 +1,21 @@
 {
     "totalPatients": 4317,
-    "connected": 1144,
+    "connected": 1147,
     "notConnected": 385,
     "inactive": 2,
     "denied": 442,
-    "pending": 2344,
+    "pending": 2341,
     "callableLeads": 3873,
-    "connectivity": 29.54,
+    "connectivity": 29.62,
     "agents": {
         "ansha": {
-            "connected": 191,
+            "connected": 192,
             "notConnected": 52,
             "inactive": 0,
             "denied": 88,
-            "pending": 384,
+            "pending": 383,
             "callableLeads": 627,
-            "connectivity": 30.46
+            "connectivity": 30.62
         },
         "sreeraj": {
             "connected": 31,
@@ -36,22 +36,22 @@
             "connectivity": 41.15
         },
         "murugesh": {
-            "connected": 351,
+            "connected": 352,
             "notConnected": 107,
             "inactive": 0,
             "denied": 0,
-            "pending": 284,
+            "pending": 283,
             "callableLeads": 742,
-            "connectivity": 47.3
+            "connectivity": 47.44
         },
         "sarita": {
-            "connected": 146,
+            "connected": 147,
             "notConnected": 74,
             "inactive": 0,
             "denied": 88,
-            "pending": 407,
+            "pending": 406,
             "callableLeads": 627,
-            "connectivity": 23.29
+            "connectivity": 23.44
         },
         "rashmi": {
             "connected": 167,
@@ -64,20 +64,20 @@
         }
     },
     "trend": {
-        "ansha": 30.46,
+        "ansha": 30.62,
         "sreeraj": 4.97,
         "mouli": 41.15,
-        "murugesh": 47.3,
-        "sarita": 23.29,
+        "murugesh": 47.44,
+        "sarita": 23.44,
         "rashmi": 26.68
     },
     "dailyPerformance": {
         "connected": [
-            35,
+            36,
             1,
             34,
-            42,
-            38,
+            43,
+            39,
             37
         ],
         "notConnected": [
@@ -107,5 +107,5 @@
             0
         ]
     },
-    "generatedOn": "2026-06-08 16:47:50"
+    "generatedOn": "2026-06-08 17:09:42"
 }
