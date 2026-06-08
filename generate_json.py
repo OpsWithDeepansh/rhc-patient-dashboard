@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import os
 import re
@@ -24,6 +25,18 @@ wb = load_workbook(file_path, data_only=True)
 # Open Helper sheet
 ws = wb["Helper"]
 
+# Find last agent row
+
+last_agent_row = 2
+
+while (
+    ws[f"A{last_agent_row}"].value is not None
+    and str(ws[f"A{last_agent_row}"].value).lower() != "total"
+):
+    last_agent_row += 1
+
+last_agent_row -= 1
+
 # Read KPI row (Row 8)
 
 kpi = {
@@ -34,18 +47,12 @@ kpi = {
     "denied": ws["F8"].value,
     "pending": ws["G8"].value,
     "callableLeads": ws["H8"].value,
-    "connectivity": ws["I8"].value
+    "connectivity": round(ws["I8"].value * 100, 2)
 }
-
-print("\nKPI DATA\n")
-for key, value in kpi.items():
-    print(f"{key}: {value}")
-
-print("\nAGENT DATA\n")
 
 agents = {}
 
-for row in range(2, 8):
+for row in range(2, last_agent_row + 1):
 
     agent_name = ws[f"A{row}"].value
 
@@ -56,17 +63,15 @@ for row in range(2, 8):
     "denied": ws[f"F{row}"].value,
     "pending": ws[f"G{row}"].value,
     "callableLeads": ws[f"H{row}"].value,
-    "connectivity": round((ws[f"C{row}"].value / ws[f"H{row}"].value) * 100, 2)
-}
-
-for agent, data in agents.items():
-    print(agent, data)
-
-    print("\nTREND DATA\n")
+    "connectivity": round(
+    ws[f"I{row}"].value * 100,
+    2
+)
+    }
 
 trend = {}
 
-for row in range(2, 8):
+for row in range(2, last_agent_row + 1):
 
     agent_name = ws[f"A{row}"].value
 
@@ -75,16 +80,12 @@ for row in range(2, 8):
         2
     )
 
-print(trend)
-
-print("\nDAILY PERFORMANCE\n")
-
 daily_performance = {
     "connected": [],
     "notConnected": []
 }
 
-for row in range(2, 8):
+for row in range(2, last_agent_row + 1):
 
     daily_performance["connected"].append(
         ws[f"M{row}"].value
@@ -94,16 +95,12 @@ for row in range(2, 8):
         ws[f"N{row}"].value
     )
 
-print(daily_performance)
-
-print("\nITP DATA\n")
-
 itp = {
     "connected": [],
     "pending": []
 }
 
-for row in range(2, 8):
+for row in range(2, last_agent_row + 1):
 
     itp["connected"].append(
         ws[f"S{row}"].value
@@ -112,8 +109,6 @@ for row in range(2, 8):
     itp["pending"].append(
         ws[f"U{row}"].value
     )
-
-print(itp)
 
 dashboard_data = {
     "totalPatients": kpi["totalPatients"],
@@ -134,8 +129,9 @@ dashboard_data = {
     "itp": itp
 }
 
-print("\nDASHBOARD JSON\n")
-print(dashboard_data)
+dashboard_data["generatedOn"] = datetime.now().strftime(
+    "%Y-%m-%d %H:%M:%S"
+)
 
 # Get filename
 
@@ -162,7 +158,8 @@ if match:
         json.dump(
             dashboard_data,
             f,
-            indent=4
+            indent=4,
+            ensure_ascii=False
         )
 
     print(f"\nJSON Created: {output_path}")
