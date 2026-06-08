@@ -380,12 +380,15 @@ function loadMonth(monthFile){
 
             document.getElementById('connectivity').textContent =
                 data.connectivity + '%';
-            loadAgentChart('anshaChart', data.agents.ansha); 
-            loadAgentChart('bhuvanChart', data.agents.bhuvan); 
-            loadAgentChart('mouliChart', data.agents.mouli); 
-            loadAgentChart('murugeshChart', data.agents.murugesh); 
-            loadAgentChart('saritaChart', data.agents.sarita); 
-            loadAgentChart('rashmiChart', data.agents.rashmi);
+
+Object.keys(data.agents).forEach(agent => {
+
+    loadAgentChart(
+        `${agent}Chart`,
+        data.agents[agent]
+    );
+
+});
 
 trendChart.data.datasets[0].data = [
     data.trend.ansha,
