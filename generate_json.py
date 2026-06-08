@@ -130,7 +130,7 @@ dashboard_data = {
 }
 
 dashboard_data["generatedOn"] = datetime.now().strftime(
-    "%Y-%m-%d %H:%M:%S"
+    "%d-%b-%Y %I:%M %p"
 )
 
 # Get filename
