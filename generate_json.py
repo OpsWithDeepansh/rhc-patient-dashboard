@@ -193,6 +193,8 @@ if match:
 
     print("months.json Updated")
 
+    os.system("publish_dashboard.bat")
+
 else:
 
     print(
