@@ -402,7 +402,7 @@ itpChart.update();
 }
 
 // Load latest month when dashboard opens
-loadMonth();
+loadMonths();
 
 // MONTH DROPDOWN
 
