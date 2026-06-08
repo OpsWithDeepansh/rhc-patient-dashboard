@@ -1,4 +1,4 @@
-// // ===== REGISTER PLUGIN =====
+//test// ===== REGISTER PLUGIN =====
 Chart.register(ChartDataLabels);
 
 // ===== COMMON SETTINGS =====
