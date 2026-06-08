@@ -60,5 +60,10 @@
   "murugesh": 46.10,
   "sarita": 50.58,
   "rashmi": 59.34
+},
+
+"dailyPerformance": {
+  "connected": [27, 0, 36, 31, 22, 32],
+  "notConnected": [16, 0, 15, 13, 11, 12]
 }
 }

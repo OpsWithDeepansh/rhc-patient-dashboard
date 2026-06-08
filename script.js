@@ -1,4 +1,4 @@
-// ===== REGISTER PLUGIN =====
+// // ===== REGISTER PLUGIN =====
 Chart.register(ChartDataLabels);
 
 // ===== COMMON SETTINGS =====
@@ -203,7 +203,9 @@ let trendChart = new Chart(
 
 // ===== DAILY PERFORMANCE =====
 
-new Chart(document.getElementById('dailyChart'), {
+let dailyChart = new Chart(
+    document.getElementById('dailyChart'), 
+    {
 
     type: 'bar',
 
@@ -373,7 +375,14 @@ trendChart.data.datasets[0].data = [
 
 console.log("After:", trendChart.data.datasets[0].data);
 
-trendChart.update();        })
+trendChart.update();
+dailyChart.data.datasets[0].data =
+    data.dailyPerformance.connected;
+
+dailyChart.data.datasets[1].data =
+    data.dailyPerformance.notConnected;
+
+dailyChart.update();        })
         .catch(error => {
             console.error('Error loading JSON:', error);
         });
