@@ -57,19 +57,21 @@ function createPieChart(id, dataValues) {
 
                     formatter: (value, context) => {
 
-                        const data =
-                            context.chart.data.datasets[0].data;
+    const data =
+        context.chart.data.datasets[0].data;
 
-                        const total =
-                            data.reduce((a, b) => a + b, 0);
+    const total =
+        data.reduce((a, b) => a + b, 0);
 
-                        const percentage =
-                            total
-                                ? (value / total * 100).toFixed(1)
-                                : 0;
+    const percentage =
+        total
+            ? (value / total * 100)
+            : 0;
 
-                        return percentage + "%";
-                    }
+    return percentage >= 5
+        ? percentage.toFixed(1) + "%"
+        : "";
+}
                 }
             }
         }
@@ -318,15 +320,19 @@ function createAgentCards(agents) {
 
     <h3>${agent}</h3>
 
-    <p>
-        Connectivity:
-        ${agents[agent].connectivity}%
-    </p>
+    <div class="agent-metrics">
 
-    <p>
-        Callable Leads:
-        ${agents[agent].callableLeads}
-    </p>
+        <div>
+            <strong>${agents[agent].connectivity}%</strong>
+            <span>Connectivity</span>
+        </div>
+
+        <div>
+            <strong>${agents[agent].callableLeads}</strong>
+            <span>Callable Leads</span>
+        </div>
+
+    </div>
 
     <div class="chart-box">
         <canvas id="${agent}Chart"></canvas>
