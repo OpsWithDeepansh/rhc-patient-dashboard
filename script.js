@@ -376,6 +376,10 @@ trendChart.data.datasets[0].data = [
 console.log("After:", trendChart.data.datasets[0].data);
 
 trendChart.update();
+console.log("Daily Performance:");
+console.log(data.dailyPerformance);
+console.log(data.dailyPerformance.connected);
+
 dailyChart.data.datasets[0].data =
     data.dailyPerformance.connected;
 
