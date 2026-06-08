@@ -1,3 +1,6 @@
+function capitalizeName(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+}
 // // ===== REGISTER PLUGIN =====
 Chart.register(ChartDataLabels);
 
@@ -20,63 +23,6 @@ const pieColors = [
 ];
 
 // ===== PIE CHART FUNCTION =====
-
-function createPieChart(id, dataValues) {
-    
-    new Chart(document.getElementById(id), {
-
-        type: 'pie',
-
-        data: {
-            labels: pieLabels,
-            datasets: [{
-                data: dataValues,
-                backgroundColor: pieColors
-            }]
-        },
-
-        options: {
-
-            responsive: true,
-            maintainAspectRatio: false,
-
-            plugins: {
-
-                legend: {
-                    position: 'bottom'
-                },
-
-                datalabels: {
-
-                    color: '#fff',
-
-                    font: {
-                        weight: 'bold',
-                        size: 12
-                    },
-
-                    formatter: (value, context) => {
-
-    const data =
-        context.chart.data.datasets[0].data;
-
-    const total =
-        data.reduce((a, b) => a + b, 0);
-
-    const percentage =
-        total
-            ? (value / total * 100)
-            : 0;
-
-    return percentage >= 5
-        ? percentage.toFixed(1) + "%"
-        : "";
-}
-                }
-            }
-        }
-    });
-}
 
 function loadAgentChart(chartId, agentData) {
 
@@ -125,9 +71,14 @@ function loadAgentChart(chartId, agentData) {
                             const total =
                                 data.reduce((a, b) => a + b, 0);
 
-                            return total
-                                ? ((value / total) * 100).toFixed(1) + '%'
-                                : '0%';
+                            const percentage =
+    total
+        ? (value / total) * 100
+        : 0;
+
+return percentage >= 5
+    ? percentage.toFixed(1) + '%'
+    : '';
                         }
                     }
                 }
@@ -318,7 +269,7 @@ function createAgentCards(agents) {
 
             <div class="card">
 
-    <h3>${agent}</h3>
+    <h3>${capitalizeName(agent)}</h3>
 
     <div class="agent-metrics">
 
@@ -388,7 +339,7 @@ Object.keys(data.agents).forEach(agent => {
 });
 
 trendChart.data.labels =
-    Object.keys(data.trend);
+    Object.keys(data.trend).map(capitalizeName);
 
 trendChart.data.datasets[0].data =
     Object.values(data.trend);
@@ -396,7 +347,7 @@ trendChart.data.datasets[0].data =
 trendChart.update();
 
 dailyChart.data.labels =
-    Object.keys(data.agents);
+    Object.keys(data.agents).map(capitalizeName);
 
 dailyChart.data.datasets[0].data =
     data.dailyPerformance.connected;
@@ -407,7 +358,7 @@ dailyChart.data.datasets[1].data =
 dailyChart.update();
 
 itpChart.data.labels =
-    Object.keys(data.agents);
+    Object.keys(data.agents).map(capitalizeName);
 
 itpChart.data.datasets[0].data =
     data.itp.connected;
