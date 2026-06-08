@@ -1,3 +1,6 @@
+import json
+import os
+import re
 from openpyxl import load_workbook
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
@@ -59,12 +62,113 @@ for row in range(2, 8):
 for agent, data in agents.items():
     print(agent, data)
 
-    print("\nHELPER SHEET DATA\n")
+    print("\nTREND DATA\n")
 
-for row in range(1, 25):
-    values = []
+trend = {}
 
-    for col in range(1, 10):
-        values.append(ws.cell(row=row, column=col).value)
+for row in range(2, 8):
 
-    print(values)
+    agent_name = ws[f"A{row}"].value
+
+    trend[agent_name.lower()] = round(
+        ws[f"I{row}"].value * 100,
+        2
+    )
+
+print(trend)
+
+print("\nDAILY PERFORMANCE\n")
+
+daily_performance = {
+    "connected": [],
+    "notConnected": []
+}
+
+for row in range(2, 8):
+
+    daily_performance["connected"].append(
+        ws[f"M{row}"].value
+    )
+
+    daily_performance["notConnected"].append(
+        ws[f"N{row}"].value
+    )
+
+print(daily_performance)
+
+print("\nITP DATA\n")
+
+itp = {
+    "connected": [],
+    "pending": []
+}
+
+for row in range(2, 8):
+
+    itp["connected"].append(
+        ws[f"S{row}"].value
+    )
+
+    itp["pending"].append(
+        ws[f"U{row}"].value
+    )
+
+print(itp)
+
+dashboard_data = {
+    "totalPatients": kpi["totalPatients"],
+    "connected": kpi["connected"],
+    "notConnected": kpi["notConnected"],
+    "inactive": kpi["inactive"],
+    "denied": kpi["denied"],
+    "pending": kpi["pending"],
+    "callableLeads": kpi["callableLeads"],
+    "connectivity": kpi["connectivity"],
+
+    "agents": agents,
+
+    "trend": trend,
+
+    "dailyPerformance": daily_performance,
+
+    "itp": itp
+}
+
+print("\nDASHBOARD JSON\n")
+print(dashboard_data)
+
+# Get filename
+
+excel_name = os.path.basename(file_path)
+
+# Extract Jun'26
+
+match = re.search(r"([A-Za-z]{3})'(\d{2})", excel_name)
+
+if match:
+
+    month_name = match.group(1)
+    year = match.group(2)
+
+    json_file_name = f"{month_name}{year}.json"
+
+    output_path = os.path.join(
+        "data",
+        json_file_name
+    )
+
+    with open(output_path, "w") as f:
+
+        json.dump(
+            dashboard_data,
+            f,
+            indent=4
+        )
+
+    print(f"\nJSON Created: {output_path}")
+
+else:
+
+    print(
+        "Could not determine month from filename."
+    )
