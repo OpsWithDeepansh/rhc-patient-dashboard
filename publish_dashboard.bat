@@ -8,7 +8,9 @@ git add .
 
 git commit -m "Dashboard Data Updated"
 
-git push
+git pull origin main --rebase
+
+git push origin main
 
 echo.
 echo ==========================
