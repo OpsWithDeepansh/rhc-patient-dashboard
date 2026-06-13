@@ -1,111 +1,111 @@
 {
     "totalPatients": 4317,
-    "connected": 1623,
-    "notConnected": 584,
+    "connected": 1854,
+    "notConnected": 702,
     "inactive": 6,
-    "denied": 442,
-    "pending": 1662,
-    "callableLeads": 3869,
-    "connectivity": 41.95,
+    "denied": 443,
+    "pending": 1312,
+    "callableLeads": 3868,
+    "connectivity": 47.93,
     "agents": {
         "ansha": {
-            "connected": 241,
-            "notConnected": 74,
+            "connected": 303,
+            "notConnected": 102,
             "inactive": 0,
             "denied": 88,
-            "pending": 312,
+            "pending": 222,
             "callableLeads": 627,
-            "connectivity": 38.44
+            "connectivity": 48.33
         },
         "sreeraj": {
-            "connected": 46,
-            "notConnected": 1,
+            "connected": 58,
+            "notConnected": 4,
             "inactive": 1,
             "denied": 90,
-            "pending": 577,
+            "pending": 562,
             "callableLeads": 624,
-            "connectivity": 7.37
+            "connectivity": 9.29
         },
         "mouli": {
-            "connected": 356,
-            "notConnected": 148,
+            "connected": 387,
+            "notConnected": 180,
             "inactive": 0,
             "denied": 88,
-            "pending": 123,
+            "pending": 60,
             "callableLeads": 627,
-            "connectivity": 56.78
+            "connectivity": 61.72
         },
         "murugesh": {
-            "connected": 455,
-            "notConnected": 160,
+            "connected": 516,
+            "notConnected": 180,
             "inactive": 3,
             "denied": 0,
-            "pending": 124,
+            "pending": 43,
             "callableLeads": 739,
-            "connectivity": 61.57
+            "connectivity": 69.82
         },
         "sarita": {
-            "connected": 267,
-            "notConnected": 115,
+            "connected": 312,
+            "notConnected": 141,
             "inactive": 0,
-            "denied": 88,
-            "pending": 245,
-            "callableLeads": 627,
-            "connectivity": 42.58
+            "denied": 89,
+            "pending": 173,
+            "callableLeads": 626,
+            "connectivity": 49.84
         },
         "rashmi": {
-            "connected": 258,
-            "notConnected": 86,
+            "connected": 278,
+            "notConnected": 95,
             "inactive": 2,
             "denied": 88,
-            "pending": 281,
+            "pending": 252,
             "callableLeads": 625,
-            "connectivity": 41.28
+            "connectivity": 44.48
         }
     },
     "trend": {
-        "ansha": 38.44,
-        "sreeraj": 7.37,
-        "mouli": 56.78,
-        "murugesh": 61.57,
-        "sarita": 42.58,
-        "rashmi": 41.28
+        "ansha": 48.33,
+        "sreeraj": 9.29,
+        "mouli": 61.72,
+        "murugesh": 69.82,
+        "sarita": 49.84,
+        "rashmi": 44.48
     },
     "dailyPerformance": {
         "connected": [
-            2,
-            0,
+            12,
             1,
-            1,
-            1,
-            1
+            10,
+            20,
+            21,
+            15
         ],
         "notConnected": [
-            0,
-            0,
-            0,
-            0,
+            6,
             1,
-            0
+            21,
+            11,
+            17,
+            7
         ]
     },
     "itp": {
         "connected": [
-            0,
+            3,
             0,
             2,
             1,
             0,
-            7
+            10
         ],
         "pending": [
-            2,
-            1,
+            0,
+            4,
             0,
             0,
             0,
-            0
+            1
         ]
     },
-    "generatedOn": "12-Jun-2026 10:03 AM"
+    "generatedOn": "13-Jun-2026 03:47 PM"
 }
