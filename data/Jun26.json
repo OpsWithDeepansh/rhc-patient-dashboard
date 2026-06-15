@@ -1,21 +1,21 @@
 {
     "totalPatients": 4317,
-    "connected": 1914,
-    "notConnected": 729,
+    "connected": 1949,
+    "notConnected": 750,
     "inactive": 6,
     "denied": 443,
-    "pending": 1225,
+    "pending": 1169,
     "callableLeads": 3868,
-    "connectivity": 49.48,
+    "connectivity": 50.39,
     "agents": {
         "ansha": {
-            "connected": 310,
-            "notConnected": 107,
+            "connected": 327,
+            "notConnected": 114,
             "inactive": 0,
             "denied": 88,
-            "pending": 210,
+            "pending": 186,
             "callableLeads": 627,
-            "connectivity": 49.44
+            "connectivity": 52.15
         },
         "sreeraj": {
             "connected": 84,
@@ -27,31 +27,31 @@
             "connectivity": 13.46
         },
         "mouli": {
-            "connected": 392,
-            "notConnected": 182,
+            "connected": 397,
+            "notConnected": 188,
             "inactive": 0,
             "denied": 88,
-            "pending": 53,
+            "pending": 42,
             "callableLeads": 627,
-            "connectivity": 62.52
+            "connectivity": 63.32
         },
         "murugesh": {
-            "connected": 520,
-            "notConnected": 183,
+            "connected": 527,
+            "notConnected": 188,
             "inactive": 3,
             "denied": 0,
-            "pending": 36,
+            "pending": 24,
             "callableLeads": 739,
-            "connectivity": 70.37
+            "connectivity": 71.31
         },
         "sarita": {
-            "connected": 327,
-            "notConnected": 148,
+            "connected": 333,
+            "notConnected": 151,
             "inactive": 0,
             "denied": 89,
-            "pending": 151,
+            "pending": 142,
             "callableLeads": 626,
-            "connectivity": 52.24
+            "connectivity": 53.19
         },
         "rashmi": {
             "connected": 281,
@@ -64,28 +64,28 @@
         }
     },
     "trend": {
-        "ansha": 49.44,
+        "ansha": 52.15,
         "sreeraj": 13.46,
-        "mouli": 62.52,
-        "murugesh": 70.37,
-        "sarita": 52.24,
+        "mouli": 63.32,
+        "murugesh": 71.31,
+        "sarita": 53.19,
         "rashmi": 44.96
     },
     "dailyPerformance": {
         "connected": [
-            1,
+            18,
             0,
-            0,
-            0,
-            1,
+            5,
+            7,
+            7,
             1
         ],
         "notConnected": [
-            1,
+            8,
             0,
-            0,
-            0,
-            1,
+            6,
+            5,
+            5,
             0
         ]
     },
@@ -104,8 +104,8 @@
             1,
             0,
             0,
-            1
+            2
         ]
     },
-    "generatedOn": "15-Jun-2026 09:56 AM"
+    "generatedOn": "15-Jun-2026 11:27 AM"
 }
