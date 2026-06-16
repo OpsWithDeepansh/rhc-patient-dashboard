@@ -1,30 +1,30 @@
 {
     "totalPatients": 4317,
-    "connected": 2039,
-    "notConnected": 835,
+    "connected": 2211,
+    "notConnected": 943,
     "inactive": 7,
     "denied": 443,
-    "pending": 993,
+    "pending": 713,
     "callableLeads": 3867,
-    "connectivity": 52.73,
+    "connectivity": 57.18,
     "agents": {
         "ansha": {
-            "connected": 363,
-            "notConnected": 144,
+            "connected": 404,
+            "notConnected": 173,
             "inactive": 0,
             "denied": 88,
-            "pending": 120,
+            "pending": 50,
             "callableLeads": 627,
-            "connectivity": 57.89
+            "connectivity": 64.43
         },
         "sreeraj": {
-            "connected": 85,
-            "notConnected": 13,
+            "connected": 186,
+            "notConnected": 68,
             "inactive": 1,
             "denied": 90,
-            "pending": 526,
+            "pending": 370,
             "callableLeads": 624,
-            "connectivity": 13.62
+            "connectivity": 29.81
         },
         "mouli": {
             "connected": 418,
@@ -45,47 +45,47 @@
             "connectivity": 73.31
         },
         "sarita": {
-            "connected": 351,
-            "notConnected": 176,
+            "connected": 380,
+            "notConnected": 200,
             "inactive": 0,
             "denied": 89,
-            "pending": 99,
+            "pending": 46,
             "callableLeads": 626,
-            "connectivity": 56.07
+            "connectivity": 60.7
         },
         "rashmi": {
-            "connected": 281,
+            "connected": 282,
             "notConnected": 96,
             "inactive": 2,
             "denied": 88,
-            "pending": 248,
+            "pending": 247,
             "callableLeads": 625,
-            "connectivity": 44.96
+            "connectivity": 45.12
         }
     },
     "trend": {
-        "ansha": 57.89,
-        "sreeraj": 13.62,
+        "ansha": 64.43,
+        "sreeraj": 29.81,
         "mouli": 66.67,
         "murugesh": 73.31,
-        "sarita": 56.07,
-        "rashmi": 44.96
+        "sarita": 60.7,
+        "rashmi": 45.12
     },
     "dailyPerformance": {
         "connected": [
-            54,
-            1,
-            26,
-            20,
-            25,
+            41,
+            100,
+            0,
+            0,
+            29,
             1
         ],
         "notConnected": [
-            39,
+            30,
+            55,
             0,
-            28,
-            16,
-            31,
+            0,
+            24,
             0
         ]
     },
@@ -107,5 +107,5 @@
             2
         ]
     },
-    "generatedOn": "15-Jun-2026 04:59 PM"
+    "generatedOn": "16-Jun-2026 06:51 PM"
 }
