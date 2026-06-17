@@ -1,30 +1,30 @@
 {
     "totalPatients": 4317,
-    "connected": 2211,
-    "notConnected": 943,
+    "connected": 2215,
+    "notConnected": 947,
     "inactive": 7,
     "denied": 443,
-    "pending": 713,
+    "pending": 705,
     "callableLeads": 3867,
-    "connectivity": 57.18,
+    "connectivity": 57.28,
     "agents": {
         "ansha": {
-            "connected": 404,
-            "notConnected": 173,
+            "connected": 406,
+            "notConnected": 175,
             "inactive": 0,
             "denied": 88,
-            "pending": 50,
+            "pending": 46,
             "callableLeads": 627,
-            "connectivity": 64.43
+            "connectivity": 64.75
         },
         "sreeraj": {
-            "connected": 186,
-            "notConnected": 68,
+            "connected": 188,
+            "notConnected": 69,
             "inactive": 1,
             "denied": 90,
-            "pending": 370,
+            "pending": 367,
             "callableLeads": 624,
-            "connectivity": 29.81
+            "connectivity": 30.13
         },
         "mouli": {
             "connected": 418,
@@ -46,10 +46,10 @@
         },
         "sarita": {
             "connected": 380,
-            "notConnected": 200,
+            "notConnected": 201,
             "inactive": 0,
             "denied": 89,
-            "pending": 46,
+            "pending": 45,
             "callableLeads": 626,
             "connectivity": 60.7
         },
@@ -64,8 +64,8 @@
         }
     },
     "trend": {
-        "ansha": 64.43,
-        "sreeraj": 29.81,
+        "ansha": 64.75,
+        "sreeraj": 30.13,
         "mouli": 66.67,
         "murugesh": 73.31,
         "sarita": 60.7,
@@ -73,19 +73,19 @@
     },
     "dailyPerformance": {
         "connected": [
-            41,
-            100,
+            2,
+            2,
             0,
             0,
-            29,
-            1
+            0,
+            0
         ],
         "notConnected": [
-            30,
-            55,
+            2,
+            1,
             0,
             0,
-            24,
+            1,
             0
         ]
     },
@@ -107,5 +107,5 @@
             2
         ]
     },
-    "generatedOn": "16-Jun-2026 06:51 PM"
+    "generatedOn": "17-Jun-2026 10:16 AM"
 }
