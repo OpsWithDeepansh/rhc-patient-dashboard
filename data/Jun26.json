@@ -1,111 +1,111 @@
 {
     "totalPatients": 4317,
-    "connected": 2215,
-    "notConnected": 947,
-    "inactive": 7,
+    "connected": 2837,
+    "notConnected": 642,
+    "inactive": 13,
     "denied": 443,
-    "pending": 705,
-    "callableLeads": 3867,
-    "connectivity": 57.28,
+    "pending": 382,
+    "callableLeads": 3861,
+    "connectivity": 73.57,
     "agents": {
         "ansha": {
-            "connected": 406,
-            "notConnected": 175,
+            "connected": 540,
+            "notConnected": 87,
             "inactive": 0,
             "denied": 88,
-            "pending": 46,
+            "pending": 0,
             "callableLeads": 627,
-            "connectivity": 64.75
+            "connectivity": 86.12
         },
         "sreeraj": {
-            "connected": 188,
-            "notConnected": 69,
-            "inactive": 1,
+            "connected": 296,
+            "notConnected": 137,
+            "inactive": 2,
             "denied": 90,
-            "pending": 367,
-            "callableLeads": 624,
-            "connectivity": 30.13
+            "pending": 190,
+            "callableLeads": 623,
+            "connectivity": 47.68
         },
         "mouli": {
-            "connected": 418,
-            "notConnected": 209,
-            "inactive": 0,
-            "denied": 88,
-            "pending": 0,
-            "callableLeads": 627,
-            "connectivity": 66.67
-        },
-        "murugesh": {
-            "connected": 541,
-            "notConnected": 197,
-            "inactive": 4,
-            "denied": 0,
-            "pending": 0,
-            "callableLeads": 738,
-            "connectivity": 73.31
-        },
-        "sarita": {
-            "connected": 380,
-            "notConnected": 201,
-            "inactive": 0,
-            "denied": 89,
-            "pending": 45,
-            "callableLeads": 626,
-            "connectivity": 60.7
-        },
-        "rashmi": {
-            "connected": 282,
-            "notConnected": 96,
+            "connected": 522,
+            "notConnected": 103,
             "inactive": 2,
             "denied": 88,
-            "pending": 247,
+            "pending": 0,
             "callableLeads": 625,
-            "connectivity": 45.12
+            "connectivity": 83.57
+        },
+        "murugesh": {
+            "connected": 646,
+            "notConnected": 89,
+            "inactive": 7,
+            "denied": 0,
+            "pending": 0,
+            "callableLeads": 735,
+            "connectivity": 88.01
+        },
+        "sarita": {
+            "connected": 511,
+            "notConnected": 115,
+            "inactive": 0,
+            "denied": 89,
+            "pending": 0,
+            "callableLeads": 626,
+            "connectivity": 81.63
+        },
+        "rashmi": {
+            "connected": 322,
+            "notConnected": 111,
+            "inactive": 2,
+            "denied": 88,
+            "pending": 192,
+            "callableLeads": 625,
+            "connectivity": 51.67
         }
     },
     "trend": {
-        "ansha": 64.75,
-        "sreeraj": 30.13,
-        "mouli": 66.67,
-        "murugesh": 73.31,
-        "sarita": 60.7,
-        "rashmi": 45.12
+        "ansha": 86.12,
+        "sreeraj": 47.68,
+        "mouli": 83.57,
+        "murugesh": 88.01,
+        "sarita": 81.63,
+        "rashmi": 51.67
     },
     "dailyPerformance": {
         "connected": [
             2,
-            2,
+            7,
+            1,
             0,
             0,
-            0,
-            0
+            7
         ],
         "notConnected": [
+            1,
+            16,
+            0,
+            0,
             2,
-            1,
-            0,
-            0,
-            1,
-            0
+            4
         ]
     },
     "itp": {
         "connected": [
-            6,
+            10,
             0,
-            9,
-            3,
-            0,
-            15
+            30,
+            11,
+            2,
+            26
         ],
         "pending": [
-            0,
-            4,
-            1,
+            3,
+            7,
+            3,
             0,
             0,
             2
         ]
     },
-    "generatedOn": "17-Jun-2026 10:16 AM"
+    "generatedOn": "23-Jun-2026 10:52 AM"
 }
