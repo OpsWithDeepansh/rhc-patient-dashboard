@@ -1,12 +1,12 @@
 {
     "totalPatients": 4317,
-    "connected": 3309,
-    "notConnected": 471,
+    "connected": 3332,
+    "notConnected": 475,
     "inactive": 27,
     "denied": 443,
-    "pending": 67,
+    "pending": 40,
     "callableLeads": 3847,
-    "connectivity": 86.11,
+    "connectivity": 86.71,
     "agents": {
         "ansha": {
             "connected": 571,
@@ -18,13 +18,13 @@
             "connectivity": 91.07
         },
         "sreeraj": {
-            "connected": 415,
-            "notConnected": 137,
+            "connected": 432,
+            "notConnected": 147,
             "inactive": 7,
             "denied": 90,
-            "pending": 66,
+            "pending": 39,
             "callableLeads": 618,
-            "connectivity": 67.52
+            "connectivity": 70.24
         },
         "mouli": {
             "connected": 564,
@@ -54,39 +54,39 @@
             "connectivity": 88.66
         },
         "rashmi": {
-            "connected": 533,
-            "notConnected": 90,
+            "connected": 539,
+            "notConnected": 84,
             "inactive": 4,
             "denied": 88,
             "pending": 0,
             "callableLeads": 623,
-            "connectivity": 85.65
+            "connectivity": 86.6
         }
     },
     "trend": {
         "ansha": 91.07,
-        "sreeraj": 67.52,
+        "sreeraj": 70.24,
         "mouli": 90.43,
         "murugesh": 92.18,
         "sarita": 88.66,
-        "rashmi": 85.65
+        "rashmi": 86.6
     },
     "dailyPerformance": {
         "connected": [
             0,
-            73,
+            90,
             0,
             0,
             0,
-            29
+            35
         ],
         "notConnected": [
             0,
-            101,
+            119,
             0,
             0,
             0,
-            11
+            19
         ]
     },
     "itp": {
@@ -107,5 +107,5 @@
             2
         ]
     },
-    "generatedOn": "26-Jun-2026 02:09 PM"
+    "generatedOn": "26-Jun-2026 03:29 PM"
 }
