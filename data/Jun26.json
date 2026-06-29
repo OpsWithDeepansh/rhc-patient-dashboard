@@ -1,12 +1,12 @@
 {
     "totalPatients": 4317,
-    "connected": 3442,
-    "notConnected": 405,
+    "connected": 3444,
+    "notConnected": 403,
     "inactive": 27,
     "denied": 443,
     "pending": 0,
     "callableLeads": 3847,
-    "connectivity": 89.55,
+    "connectivity": 89.6,
     "agents": {
         "ansha": {
             "connected": 579,
@@ -45,22 +45,22 @@
             "connectivity": 92.18
         },
         "sarita": {
-            "connected": 564,
-            "notConnected": 62,
+            "connected": 565,
+            "notConnected": 61,
             "inactive": 0,
             "denied": 89,
             "pending": 0,
             "callableLeads": 626,
-            "connectivity": 90.1
+            "connectivity": 90.26
         },
         "rashmi": {
-            "connected": 588,
-            "notConnected": 35,
+            "connected": 589,
+            "notConnected": 34,
             "inactive": 4,
             "denied": 88,
             "pending": 0,
             "callableLeads": 623,
-            "connectivity": 94.42
+            "connectivity": 94.58
         }
     },
     "trend": {
@@ -68,8 +68,8 @@
         "sreeraj": 77.12,
         "mouli": 90.59,
         "murugesh": 92.18,
-        "sarita": 90.1,
-        "rashmi": 94.42
+        "sarita": 90.26,
+        "rashmi": 94.58
     },
     "dailyPerformance": {
         "connected": [
@@ -77,8 +77,8 @@
             0,
             0,
             0,
-            2,
-            26
+            3,
+            27
         ],
         "notConnected": [
             0,
@@ -91,21 +91,21 @@
     },
     "itp": {
         "connected": [
-            6,
+            26,
             1,
-            45,
+            48,
             16,
-            3,
-            26
+            5,
+            30
         ],
         "pending": [
-            21,
+            0,
             5,
-            3,
-            5,
-            3,
-            6
+            0,
+            6,
+            0,
+            1
         ]
     },
-    "generatedOn": "29-Jun-2026 12:02 PM"
+    "generatedOn": "29-Jun-2026 01:06 PM"
 }
