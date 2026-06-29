@@ -14,18 +14,20 @@
 
 <body>
 
-    <h1 style="margin-bottom:20px;">Patient Dashboard</h1>
-    
-    <div style="margin-bottom:20px;">
+    <header class="dashboard-header">
+        <div>
+            <h1>Patient Dashboard</h1>
+            <p class="subtitle">Monthly patient connectivity and agent performance</p>
+        </div>
 
-    <label><strong>Month:</strong></label>
-
-    <select id="monthSelector"></select>
-
-    <div id="lastUpdated" class="last-updated">
-        Last Updated: -
-    </div>
-</div>
+        <div class="month-filter">
+            <label for="monthSelector"><strong>Month:</strong></label>
+            <select id="monthSelector"></select>
+            <div id="lastUpdated" class="last-updated">
+                Last Updated: -
+            </div>
+        </div>
+    </header>
     <!-- KPI ROW -->
     <div class="kpi-row">
 
@@ -73,9 +75,7 @@
 
     <!-- AGENT GRID -->
 
-    <div class="agent-grid" id="agentGrid">
-
-</div>
+    <div class="agent-grid" id="agentGrid"></div>
 
     <!-- ANALYTICS -->
 

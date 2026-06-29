@@ -2,9 +2,35 @@ from datetime import datetime
 import json
 import os
 import re
+import sys
 from openpyxl import load_workbook
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+MONTH_ORDER = {
+    "Jan": 1,
+    "Feb": 2,
+    "Mar": 3,
+    "Apr": 4,
+    "May": 5,
+    "Jun": 6,
+    "Jul": 7,
+    "Aug": 8,
+    "Sep": 9,
+    "Oct": 10,
+    "Nov": 11,
+    "Dec": 12
+}
+
+
+def sort_month_code(month_code):
+    month_name = month_code[:3]
+    year = int(month_code[3:])
+
+    return year, MONTH_ORDER.get(month_name, 99)
 
 # Hide Tkinter window
 Tk().withdraw()
@@ -17,12 +43,16 @@ file_path = askopenfilename(
 
 if not file_path:
     print("No file selected.")
-    exit()
+    sys.exit()
 
 # Open workbook
 wb = load_workbook(file_path, data_only=True)
 
 # Open Helper sheet
+if "Helper" not in wb.sheetnames:
+    print("Could not find the Helper sheet in the selected workbook.")
+    sys.exit()
+
 ws = wb["Helper"]
 
 # Find last agent row
@@ -148,8 +178,10 @@ if match:
 
     json_file_name = f"{month_name}{year}.json"
 
+    os.makedirs(DATA_DIR, exist_ok=True)
+
     output_path = os.path.join(
-        "data",
+        DATA_DIR,
         json_file_name
     )
 
@@ -167,7 +199,7 @@ if match:
     # Update months.json
 
     months_file = os.path.join(
-        "data",
+        DATA_DIR,
         "months.json"
     )
 
@@ -181,7 +213,9 @@ if match:
     month_code = f"{month_name}{year}"
 
     if month_code not in months:
-        months.insert(0, month_code)
+        months.append(month_code)
+
+    months.sort(key=sort_month_code)
 
     with open(months_file, "w") as f:
 

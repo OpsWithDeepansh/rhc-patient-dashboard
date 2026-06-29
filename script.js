@@ -1,7 +1,16 @@
 function capitalizeName(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
-// // ===== REGISTER PLUGIN =====
+
+function formatMonthLabel(monthCode) {
+    return monthCode.substring(0, 3) + "'" + monthCode.substring(3);
+}
+
+function showLoadError(message) {
+    document.getElementById('lastUpdated').textContent = message;
+}
+
+// ===== REGISTER PLUGIN =====
 Chart.register(ChartDataLabels);
 
 // ===== COMMON SETTINGS =====
@@ -264,43 +273,46 @@ function createAgentCards(agents) {
     agentGrid.innerHTML = '';
 
     Object.keys(agents).forEach(agent => {
+        const card = document.createElement('div');
+        card.className = 'card';
 
-        agentGrid.innerHTML += `
-
-            <div class="card">
-
-    <h3>${capitalizeName(agent)}</h3>
-
-    <div class="agent-metrics">
-
-        <div>
-            <strong>${agents[agent].connectivity}%</strong>
-            <span>Connectivity</span>
-        </div>
-
-        <div>
-            <strong>${agents[agent].callableLeads}</strong>
-            <span>Callable Leads</span>
-        </div>
-
-    </div>
-
-    <div class="chart-box">
-        <canvas id="${agent}Chart"></canvas>
-    </div>
-
-</div>
-
+        card.innerHTML = `
+            <h3>${capitalizeName(agent)}</h3>
+            <div class="agent-metrics">
+                <div>
+                    <strong>${agents[agent].connectivity}%</strong>
+                    <span>Connectivity</span>
+                </div>
+                <div>
+                    <strong>${agents[agent].callableLeads}</strong>
+                    <span>Callable Leads</span>
+                </div>
+            </div>
+            <div class="chart-box">
+                <canvas id="${agent}Chart"></canvas>
+            </div>
         `;
+
+        agentGrid.appendChild(card);
 
     });
 
 }
+
 function loadMonths() {
 
     fetch('data/months.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Could not load data/months.json');
+            }
+
+            return response.json();
+        })
         .then(months => {
+            if (!Array.isArray(months) || months.length === 0) {
+                throw new Error('No months found in data/months.json');
+            }
 
             const selector =
                 document.getElementById('monthSelector');
@@ -308,22 +320,21 @@ function loadMonths() {
             selector.innerHTML = '';
 
             months.forEach(month => {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = formatMonthLabel(month);
 
-    const displayMonth =
-        month.substring(0, 3) +
-        "'" +
-        month.substring(3);
+                selector.appendChild(option);
+            });
 
-    selector.innerHTML += `
-        <option value="${month}">
-            ${displayMonth}
-        </option>
-    `;
+            const latestMonth = months[months.length - 1];
+            selector.value = latestMonth;
+            loadMonth(latestMonth);
 
-});
-
-            loadMonth(months[0]);
-
+        })
+        .catch(error => {
+            console.error('Error loading months:', error);
+            showLoadError('Could not load month list.');
         });
 
 }
@@ -331,7 +342,13 @@ function loadMonths() {
 function loadMonth(monthFile){
 
     fetch(`data/${monthFile}.json`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Could not load data/${monthFile}.json`);
+            }
+
+            return response.json();
+        })
         .then(data => {
 
             createAgentCards(data.agents);
@@ -404,6 +421,7 @@ itpChart.update();
         })
         .catch(error => {
             console.error('Error loading JSON:', error);
+            showLoadError('Could not load selected month data.');
         });
 
 }
