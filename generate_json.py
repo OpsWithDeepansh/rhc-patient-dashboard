@@ -9,6 +9,7 @@ from tkinter.filedialog import askopenfilename
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
+MONTHLY_FILES_DIR = os.path.dirname(BASE_DIR)
 
 MONTH_ORDER = {
     "Jan": 1,
@@ -32,14 +33,60 @@ def sort_month_code(month_code):
 
     return year, MONTH_ORDER.get(month_name, 99)
 
+
+def get_current_month_code():
+    return datetime.now().strftime("%b'%y")
+
+
+def find_current_month_file():
+    month_code = get_current_month_code()
+    month_folder = os.path.join(MONTHLY_FILES_DIR, month_code)
+
+    if not os.path.isdir(month_folder):
+        print(f"Current month folder not found: {month_folder}")
+        return None
+
+    matching_files = []
+
+    for root, _, files in os.walk(month_folder):
+        for file_name in files:
+            lower_name = file_name.lower()
+
+            if (
+                lower_name.endswith(".xlsx")
+                and not lower_name.startswith("~$")
+                and "patient on therapy" in lower_name
+            ):
+                matching_files.append(
+                    os.path.join(root, file_name)
+                )
+
+    if not matching_files:
+        print(f"No Patient on Therapy Excel file found in: {month_folder}")
+        return None
+
+    matching_files.sort(
+        key=lambda path: os.path.getmtime(path),
+        reverse=True
+    )
+
+    return matching_files[0]
+
 # Hide Tkinter window
 Tk().withdraw()
 
-# Select Excel file
-file_path = askopenfilename(
-    title="Select Patient on Therapy Excel File",
-    filetypes=[("Excel Files", "*.xlsx")]
-)
+# Select current month's Patient on Therapy file automatically.
+file_path = find_current_month_file()
+
+if file_path:
+    print(f"Auto selected file: {file_path}")
+else:
+    print("Please select the Patient on Therapy file manually.")
+
+    file_path = askopenfilename(
+        title="Select Patient on Therapy Excel File",
+        filetypes=[("Excel Files", "*.xlsx")]
+    )
 
 if not file_path:
     print("No file selected.")
