@@ -1,12 +1,12 @@
 {
     "totalPatients": 4299,
-    "connected": 113,
-    "notConnected": 26,
+    "connected": 117,
+    "notConnected": 28,
     "inactive": 0,
     "denied": 0,
-    "pending": 4160,
+    "pending": 4154,
     "callableLeads": 4299,
-    "connectivity": 2.63,
+    "connectivity": 2.72,
     "agents": {
         "ansha": {
             "connected": 0,
@@ -27,31 +27,31 @@
             "connectivity": 0.56
         },
         "mouli": {
-            "connected": 40,
-            "notConnected": 7,
-            "inactive": 0,
-            "denied": 0,
-            "pending": 669,
-            "callableLeads": 716,
-            "connectivity": 5.59
-        },
-        "murugesh": {
-            "connected": 35,
+            "connected": 41,
             "notConnected": 8,
             "inactive": 0,
             "denied": 0,
-            "pending": 711,
+            "pending": 667,
+            "callableLeads": 716,
+            "connectivity": 5.73
+        },
+        "murugesh": {
+            "connected": 36,
+            "notConnected": 9,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 709,
             "callableLeads": 754,
-            "connectivity": 4.64
+            "connectivity": 4.77
         },
         "sarita": {
-            "connected": 24,
+            "connected": 26,
             "notConnected": 11,
             "inactive": 0,
             "denied": 0,
-            "pending": 682,
+            "pending": 680,
             "callableLeads": 717,
-            "connectivity": 3.35
+            "connectivity": 3.63
         },
         "rashmi": {
             "connected": 10,
@@ -66,25 +66,25 @@
     "trend": {
         "ansha": 0,
         "sreeraj": 0.56,
-        "mouli": 5.59,
-        "murugesh": 4.64,
-        "sarita": 3.35,
+        "mouli": 5.73,
+        "murugesh": 4.77,
+        "sarita": 3.63,
         "rashmi": 1.47
     },
     "dailyPerformance": {
         "connected": [
             0,
             4,
-            40,
-            35,
-            24,
+            41,
+            36,
+            26,
             10
         ],
         "notConnected": [
             0,
             0,
-            7,
             8,
+            9,
             11,
             0
         ]
@@ -107,5 +107,5 @@
             "#REF!"
         ]
     },
-    "generatedOn": "01-Jul-2026 03:57 PM"
+    "generatedOn": "01-Jul-2026 04:00 PM"
 }
