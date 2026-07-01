@@ -1,0 +1,111 @@
+{
+    "totalPatients": 3834,
+    "connected": 17,
+    "notConnected": 1,
+    "inactive": 0,
+    "denied": 0,
+    "pending": 3816,
+    "callableLeads": 3834,
+    "connectivity": 0.44,
+    "agents": {
+        "ansha": {
+            "connected": 0,
+            "notConnected": 0,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 639,
+            "callableLeads": 639,
+            "connectivity": 0
+        },
+        "sreeraj": {
+            "connected": 0,
+            "notConnected": 0,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 639,
+            "callableLeads": 639,
+            "connectivity": 0
+        },
+        "mouli": {
+            "connected": 6,
+            "notConnected": 0,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 633,
+            "callableLeads": 639,
+            "connectivity": 0.94
+        },
+        "murugesh": {
+            "connected": 3,
+            "notConnected": 0,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 674,
+            "callableLeads": 677,
+            "connectivity": 0.44
+        },
+        "sarita": {
+            "connected": 8,
+            "notConnected": 1,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 630,
+            "callableLeads": 639,
+            "connectivity": 1.25
+        },
+        "rashmi": {
+            "connected": 0,
+            "notConnected": 0,
+            "inactive": 0,
+            "denied": 0,
+            "pending": 601,
+            "callableLeads": 601,
+            "connectivity": 0
+        }
+    },
+    "trend": {
+        "ansha": 0,
+        "sreeraj": 0,
+        "mouli": 0.94,
+        "murugesh": 0.44,
+        "sarita": 1.25,
+        "rashmi": 0
+    },
+    "dailyPerformance": {
+        "connected": [
+            0,
+            0,
+            6,
+            3,
+            8,
+            0
+        ],
+        "notConnected": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    },
+    "itp": {
+        "connected": [
+            "#REF!",
+            "#REF!",
+            "#REF!",
+            "#REF!",
+            "#REF!",
+            "#REF!"
+        ],
+        "pending": [
+            "#REF!",
+            "#REF!",
+            "#REF!",
+            "#REF!",
+            "#REF!",
+            "#REF!"
+        ]
+    },
+    "generatedOn": "01-Jul-2026 12:01 PM"
+}
