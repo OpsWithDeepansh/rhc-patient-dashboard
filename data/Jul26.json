@@ -1,12 +1,12 @@
 {
     "totalPatients": 4299,
-    "connected": 371,
+    "connected": 372,
     "notConnected": 262,
     "inactive": 0,
     "denied": 0,
-    "pending": 3666,
+    "pending": 3665,
     "callableLeads": 4299,
-    "connectivity": 8.63,
+    "connectivity": 8.65,
     "agents": {
         "ansha": {
             "connected": 24,
@@ -27,13 +27,13 @@
             "connectivity": 0.7
         },
         "mouli": {
-            "connected": 107,
+            "connected": 108,
             "notConnected": 62,
             "inactive": 0,
             "denied": 0,
-            "pending": 547,
+            "pending": 546,
             "callableLeads": 716,
-            "connectivity": 14.94
+            "connectivity": 15.08
         },
         "murugesh": {
             "connected": 104,
@@ -66,7 +66,7 @@
     "trend": {
         "ansha": 3.35,
         "sreeraj": 0.7,
-        "mouli": 14.94,
+        "mouli": 15.08,
         "murugesh": 13.79,
         "sarita": 9.48,
         "rashmi": 9.28
@@ -75,7 +75,7 @@
         "connected": [
             0,
             1,
-            34,
+            35,
             30,
             18,
             28
@@ -107,5 +107,5 @@
             "#REF!"
         ]
     },
-    "generatedOn": "03-Jul-2026 02:07 PM"
+    "generatedOn": "03-Jul-2026 02:11 PM"
 }
