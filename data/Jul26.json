@@ -1,111 +1,111 @@
 {
     "totalPatients": 3834,
-    "connected": 1285,
-    "notConnected": 567,
-    "inactive": 3,
-    "denied": 0,
-    "pending": 1979,
-    "callableLeads": 3831,
-    "connectivity": 33.59,
+    "connected": 2555,
+    "notConnected": 1129,
+    "inactive": 15,
+    "denied": 3,
+    "pending": 132,
+    "callableLeads": 3816,
+    "connectivity": 67.08,
     "agents": {
         "ansha": {
-            "connected": 260,
-            "notConnected": 80,
+            "connected": 469,
+            "notConnected": 168,
             "inactive": 0,
-            "denied": 0,
-            "pending": 299,
-            "callableLeads": 639,
-            "connectivity": 40.69
+            "denied": 2,
+            "pending": 0,
+            "callableLeads": 637,
+            "connectivity": 73.63
         },
         "sreeraj": {
-            "connected": 23,
-            "notConnected": 2,
-            "inactive": 0,
-            "denied": 0,
-            "pending": 614,
-            "callableLeads": 639,
-            "connectivity": 3.6
-        },
-        "mouli": {
-            "connected": 298,
-            "notConnected": 137,
+            "connected": 366,
+            "notConnected": 171,
             "inactive": 2,
             "denied": 0,
-            "pending": 202,
+            "pending": 100,
             "callableLeads": 637,
-            "connectivity": 46.95
+            "connectivity": 57.59
+        },
+        "mouli": {
+            "connected": 435,
+            "notConnected": 197,
+            "inactive": 6,
+            "denied": 1,
+            "pending": 0,
+            "callableLeads": 632,
+            "connectivity": 69.12
         },
         "murugesh": {
-            "connected": 301,
-            "notConnected": 114,
-            "inactive": 0,
+            "connected": 488,
+            "notConnected": 185,
+            "inactive": 4,
             "denied": 0,
-            "pending": 262,
-            "callableLeads": 677,
-            "connectivity": 44.46
+            "pending": 0,
+            "callableLeads": 673,
+            "connectivity": 72.67
         },
         "sarita": {
-            "connected": 249,
-            "notConnected": 180,
+            "connected": 389,
+            "notConnected": 249,
             "inactive": 1,
             "denied": 0,
-            "pending": 209,
+            "pending": 0,
             "callableLeads": 638,
-            "connectivity": 39.12
+            "connectivity": 61.03
         },
         "rashmi": {
-            "connected": 154,
-            "notConnected": 54,
-            "inactive": 0,
+            "connected": 408,
+            "notConnected": 159,
+            "inactive": 2,
             "denied": 0,
-            "pending": 393,
-            "callableLeads": 601,
-            "connectivity": 25.62
+            "pending": 32,
+            "callableLeads": 599,
+            "connectivity": 68.22
         }
     },
     "trend": {
-        "ansha": 40.69,
-        "sreeraj": 3.6,
-        "mouli": 46.95,
-        "murugesh": 44.46,
-        "sarita": 39.12,
-        "rashmi": 25.62
+        "ansha": 73.63,
+        "sreeraj": 57.59,
+        "mouli": 69.12,
+        "murugesh": 72.67,
+        "sarita": 61.03,
+        "rashmi": 68.22
     },
     "dailyPerformance": {
         "connected": [
-            33,
-            3,
-            39,
-            47,
-            34,
-            37
+            0,
+            29,
+            10,
+            0,
+            0,
+            27
         ],
         "notConnected": [
-            12,
             0,
             10,
-            6,
-            17,
-            4
+            11,
+            0,
+            0,
+            9
         ]
     },
     "itp": {
         "connected": [
-            1,
+            7,
             0,
             1,
-            0,
-            0,
-            9
+            10,
+            2,
+            21
         ],
         "pending": [
-            1,
             0,
             0,
+            4,
             0,
             0,
-            0
+            1
         ]
     },
-    "generatedOn": "08-Jul-2026 03:27 PM"
+    "generatedOn": "17-Jul-2026 04:48 PM"
 }
