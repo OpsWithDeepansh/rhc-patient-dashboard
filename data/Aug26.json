@@ -1,0 +1,111 @@
+{
+    "totalPatients": 3825,
+    "connected": 2382,
+    "notConnected": 956,
+    "inactive": 40,
+    "denied": 3,
+    "pending": 444,
+    "callableLeads": 3782,
+    "connectivity": 63.37,
+    "agents": {
+        "ansha": {
+            "connected": 607,
+            "notConnected": 51,
+            "inactive": 1,
+            "denied": 0,
+            "pending": 0,
+            "callableLeads": 658,
+            "connectivity": 92.26
+        },
+        "komala": {
+            "connected": 306,
+            "notConnected": 209,
+            "inactive": 5,
+            "denied": 1,
+            "pending": 71,
+            "callableLeads": 586,
+            "connectivity": 52.62
+        },
+        "mouli": {
+            "connected": 404,
+            "notConnected": 194,
+            "inactive": 0,
+            "denied": 1,
+            "pending": 43,
+            "callableLeads": 641,
+            "connectivity": 63.03
+        },
+        "murugesh": {
+            "connected": 459,
+            "notConnected": 197,
+            "inactive": 0,
+            "denied": 1,
+            "pending": 1,
+            "callableLeads": 657,
+            "connectivity": 69.86
+        },
+        "sarita": {
+            "connected": 358,
+            "notConnected": 228,
+            "inactive": 31,
+            "denied": 0,
+            "pending": 24,
+            "callableLeads": 610,
+            "connectivity": 60.69
+        },
+        "rashmi": {
+            "connected": 248,
+            "notConnected": 77,
+            "inactive": 3,
+            "denied": 0,
+            "pending": 305,
+            "callableLeads": 630,
+            "connectivity": 39.65
+        }
+    },
+    "trend": {
+        "ansha": 92.26,
+        "komala": 52.62,
+        "mouli": 63.03,
+        "murugesh": 69.86,
+        "sarita": 60.69,
+        "rashmi": 39.65
+    },
+    "dailyPerformance": {
+        "connected": [
+            0,
+            39,
+            33,
+            28,
+            29,
+            10
+        ],
+        "notConnected": [
+            0,
+            23,
+            17,
+            19,
+            15,
+            3
+        ]
+    },
+    "itp": {
+        "connected": [
+            6,
+            3,
+            3,
+            5,
+            6,
+            8
+        ],
+        "pending": [
+            2,
+            0,
+            0,
+            5,
+            2,
+            9
+        ]
+    },
+    "generatedOn": "17-Aug-2026 04:22 PM"
+}
