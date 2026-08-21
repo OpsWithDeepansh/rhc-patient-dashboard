@@ -1,111 +1,111 @@
 {
     "totalPatients": 3825,
-    "connected": 2382,
-    "notConnected": 956,
-    "inactive": 40,
+    "connected": 2856,
+    "notConnected": 674,
+    "inactive": 47,
     "denied": 3,
-    "pending": 444,
-    "callableLeads": 3782,
-    "connectivity": 63.37,
+    "pending": 245,
+    "callableLeads": 3775,
+    "connectivity": 75.95,
     "agents": {
         "ansha": {
-            "connected": 607,
-            "notConnected": 51,
+            "connected": 608,
+            "notConnected": 50,
             "inactive": 1,
             "denied": 0,
             "pending": 0,
             "callableLeads": 658,
-            "connectivity": 92.26
+            "connectivity": 92.41
         },
         "komala": {
-            "connected": 306,
-            "notConnected": 209,
-            "inactive": 5,
+            "connected": 443,
+            "notConnected": 141,
+            "inactive": 7,
             "denied": 1,
-            "pending": 71,
-            "callableLeads": 586,
-            "connectivity": 52.62
+            "pending": 0,
+            "callableLeads": 584,
+            "connectivity": 76.14
         },
         "mouli": {
-            "connected": 404,
-            "notConnected": 194,
-            "inactive": 0,
+            "connected": 502,
+            "notConnected": 136,
+            "inactive": 3,
             "denied": 1,
-            "pending": 43,
-            "callableLeads": 641,
-            "connectivity": 63.03
+            "pending": 0,
+            "callableLeads": 638,
+            "connectivity": 78.78
         },
         "murugesh": {
-            "connected": 459,
-            "notConnected": 197,
+            "connected": 561,
+            "notConnected": 96,
             "inactive": 0,
             "denied": 1,
-            "pending": 1,
+            "pending": 0,
             "callableLeads": 657,
-            "connectivity": 69.86
+            "connectivity": 85.39
         },
         "sarita": {
-            "connected": 358,
-            "notConnected": 228,
-            "inactive": 31,
+            "connected": 449,
+            "notConnected": 160,
+            "inactive": 32,
             "denied": 0,
-            "pending": 24,
-            "callableLeads": 610,
-            "connectivity": 60.69
+            "pending": 0,
+            "callableLeads": 609,
+            "connectivity": 75.04
         },
         "rashmi": {
-            "connected": 248,
-            "notConnected": 77,
-            "inactive": 3,
+            "connected": 293,
+            "notConnected": 91,
+            "inactive": 4,
             "denied": 0,
-            "pending": 305,
-            "callableLeads": 630,
-            "connectivity": 39.65
+            "pending": 245,
+            "callableLeads": 629,
+            "connectivity": 46.92
         }
     },
     "trend": {
-        "ansha": 92.26,
-        "komala": 52.62,
-        "mouli": 63.03,
-        "murugesh": 69.86,
-        "sarita": 60.69,
-        "rashmi": 39.65
+        "ansha": 92.41,
+        "komala": 76.14,
+        "mouli": 78.78,
+        "murugesh": 85.39,
+        "sarita": 75.04,
+        "rashmi": 46.92
     },
     "dailyPerformance": {
         "connected": [
             0,
-            39,
-            33,
-            28,
             29,
-            10
+            14,
+            17,
+            13,
+            1
         ],
         "notConnected": [
             0,
-            23,
-            17,
+            25,
             19,
-            15,
-            3
+            27,
+            18,
+            0
         ]
     },
     "itp": {
         "connected": [
+            8,
             6,
             3,
-            3,
-            5,
-            6,
-            8
+            15,
+            8,
+            19
         ],
         "pending": [
-            2,
             0,
             0,
-            5,
-            2,
-            9
+            0,
+            0,
+            0,
+            0
         ]
     },
-    "generatedOn": "17-Aug-2026 04:22 PM"
+    "generatedOn": "21-Aug-2026 04:53 PM"
 }
